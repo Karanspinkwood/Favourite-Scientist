@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nikola Tesla - Personal Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-video video {
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 5%;
+      right: 5%;
+      background-color: #5500d4;
+      border-radius: 5px;
+      padding: 20px;
+    }
+
+    .header-title {
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .personal-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .scientist-image {
+      width: 200px;
+      border: 2px solid #5500d4;
+      border-radius: 5px;
+    }
+
+    .info-paragraph {
+      margin-left: 20px;
+      color: #333;
+    }
+
+    .upcoming-events {
+      margin-bottom: 20px;
+    }
+
+    .event {
+      margin-bottom: 10px;
+    }
+
+    .event-name {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .event-location,
+    .event-date {
+      font-size: 14px;
+      color: #666;
+    }
+
+    button {
+      display: block;
+      background-color: #5500d4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3a0087;
+    }
+
+    .article-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .article-description {
+      font-size: 14px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    input[type="text"] {
+      font-size: 16px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .favorite-scientist {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="background-video">
+    <video autoplay loop muted>
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+  <header>
+    <h1 class="header-title">Nikola Tesla</h1>
+  </header>
+  <div class="container">
+    <h1 class="header-title">Nikola Tesla</h1>
+  </div>
+  <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
+    <div class="personal-info">
+      <img src="nikola-tesla.jpg" alt="Nikola Tesla" class="scientist-image">
+      <p class="info-paragraph">Nikola Tesla was a Serbian-American inventor, electrical engineer, mechanical engineer, and futurist best known for his contributions to the design of the modern alternating current (AC) electrical supply system.</p>
+    </div>
+  </div>
+
+  <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h2>Upcoming Events:</h2>
+    <div class="upcoming-events event">
+      <p class="event-name">Conference on Renewable Energy</p>
+      <p class="event-location">New York, USA</p>
+      <p class="event-date">June 15, 2023</p>
+    </div>
+    <div class="upcoming-events event">
+      <p class="event-name">Innovation Summit</p>
+      <p class="event-location">San Francisco, USA</p>
+      <p class="event-date">July 5, 2023</p>
+    </div>
+    <div class="upcoming-events event">
+      <p class="event-name">Technology Expo</p>
+      <p class="event-location">London, UK</p>
+      <p class="event-date">August 10, 2023</p>
+    </div>
+    <button onclick="styleUpcomingEvents()">Style me</button>
+  </div>
+
+  <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h2>Articles:</h2>
+    <div class="article">
+      <h3 class="article-name">The Power of Alternating Current</h3>
+      <p class="article-description">Explore the revolutionary impact of alternating current in the field of electricity and its importance in modern-day power distribution.</p>
+    </div>
+    <div class="article">
+      <h3 class="article-name">Wireless Transmission of Energy</h3>
+      <p class="article-description">Discover Tesla's pioneering work on wireless energy transmission and its potential applications in the future.</p>
+    </div>
+    <div class="article">
+      <h3 class="article-name">The Tesla Coil and Resonance</h3>
+      <p class="article-description">Learn about the principles behind Tesla's famous invention, the Tesla Coil, and its role in demonstrating the concept of resonance.</p>
+    </div>
+  </div>
+
+  <div class="container" style="background-color: rgba(255, 255, 255, 0.8);">
+    <h2>Favorite Scientist</h2>
+    <form>
+      <label for="scientist-input">Favorite scientist:</label>
+      <input type="text" id="scientist-input" placeholder="Enter scientist's name">
+      <button onclick="addFavoriteScientist()">+</button>
+    </form>
+    <p class="favorite-scientist" id="favorite-scientist"></p>
+  </div>
+
+  <script>
+    function styleUpcomingEvents() {
+      const events = document.getElementsByClassName('upcoming-events');
+      for (let i = 0; i < events.length; i++) {
+        events[i].style.fontSize = '18px';
+        events[i].style.color = '#fff';
+        events[i].style.fontFamily = 'Montserrat, sans-serif';
+        events[i].style.border = '2px solid #5500d4';
+        events[i].style.borderRadius = '5px';
+        events[i].style.backgroundColor = '#5500d4';
+      }
+      textBelowHeading.style.color = '#fff';
+    }
+
+    const storedFavoriteScientist = localStorage.getItem('favoriteScientist');
+    if (storedFavoriteScientist) {
+      const favoriteScientist = document.getElementById('favorite-scientist');
+      favoriteScientist.textContent = `Favorite Scientist: ${storedFavoriteScientist}`;
+    }
+
+    function addFavoriteScientist() {
+      const input = document.getElementById('scientist-input');
+      const favoriteScientist = document.getElementById('favorite-scientist');
+      localStorage.setItem('favoriteScientist', input.value);
+      favoriteScientist.textContent = `Favorite Scientist: ${input.value}`;
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
